@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Siri Chinta | Innovative Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <!-- Floating Navigation Dots -->
+    <div class="floating-nav" id="floatingNav">
+        <div class="nav-dot active" data-section="home">
+            <i class="fas fa-home"></i>
+            <span class="tooltip">Home</span>
+        </div>
+        <div class="nav-dot" data-section="education">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="tooltip">Education</span>
+        </div>
+        <div class="nav-dot" data-section="skills">
+            <i class="fas fa-code"></i>
+            <span class="tooltip">Skills</span>
+        </div>
+        <div class="nav-dot" data-section="experience">
+            <i class="fas fa-briefcase"></i>
+            <span class="tooltip">Experience</span>
+        </div>
+        <div class="nav-dot" data-section="projects">
+            <i class="fas fa-project-diagram"></i>
+            <span class="tooltip">Projects</span>
+        </div>
+        <div class="nav-dot" data-section="publications">
+            <i class="fas fa-file-alt"></i>
+            <span class="tooltip">Publications</span>
+        </div>
+        <div class="nav-dot" data-section="contact">
+            <i class="fas fa-envelope"></i>
+            <span class="tooltip">Contact</span>
+        </div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle floating" id="themeToggle">
+        <i class="fas fa-moon"></i>
+        <span class="tooltip">Toggle Theme</span>
+    </button>
+
+    <!-- Progress Indicator -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="gradient-text">Sai Siri Chinta</span>
+                            <div class="typing-container">
+                                <span class="typing-text" id="typingText"></span>
+                                <span class="cursor">|</span>
+                            </div>
+                        </h1>
+                        <p class="hero-subtitle">Master's in Computer Science @ UC San Diego</p>
+                        <p class="hero-description">
+                            Software Development Engineer specializing in Android development, 
+                            distributed systems, and creating impactful solutions through 
+                            innovative technology.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">3.67</div>
+                                <div class="stat-label">GPA (Masters)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3.82</div>
+                                <div class="stat-label">GPA (Bachelors)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Publications</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">4+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                        </div>
+
+                        <div class="hero-contact-grid">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>619-953-9520</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>siri102002@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>San Diego, CA</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/sai-siri-chinta-75509122a/" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Get In Touch
+                            </a>
+                            <a href="#projects" class="btn-secondary">
+                                <i class="fas fa-eye"></i> View Projects
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="visual-container">
+                            <div class="floating-icon" style="--delay: 0s">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 1s">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 2s">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 3s">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 4s">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 5s">
+                                <i class="fab fa-python"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap section-icon"></i>
+                    Education Journey
+                </h2>
+                <p class="section-subtitle">Academic Excellence & Continuous Learning</p>
+            </div>
+
+            <div class="education-timeline">
+                <div class="timeline-track">
+                    <div class="timeline-node">
+                        <div class="node-icon">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/ucsd.svg" alt="UCSD">
+                        </div>
+                        <div class="node-content">
+                            <h3 class="node-title">University of California San Diego</h3>
+                            <p class="node-subtitle">Master of Science, Computer Science</p>
+                            <p class="node-period">Sept 2024 - Mar 2025 (Expected)</p>
+                            <div class="node-badge">
+                                <span class="badge">CGPA: 3.67/4.0</span>
+                            </div>
+                            <div class="node-tags">
+                                <span class="tag">Graduate Courses</span>
+                                <span class="tag">Research Focus</span>
+                                <span class="tag">Advanced Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-connector"></div>
+
+                    <div class="timeline-node">
+                        <div class="node-icon">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/vit.svg" alt="VIT">
+                        </div>
+                        <div class="node-content">
+                            <h3 class="node-title">Vellore Institute of Technology University</h3>
+                            <p class="node-subtitle">Bachelor of Technology, Computer Science Engineering</p>
+                            <p class="node-period">Sept 2020 - May 2024</p>
+                            <div class="node-badge">
+                                <span class="badge">CGPA: 3.82/4.0</span>
+                                <span class="badge">Top 10%</span>
+                            </div>
+                            <div class="node-tags">
+                                <span class="tag">Core CS</span>
+                                <span class="tag">Research Papers</span>
+                                <span class="tag">Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-code section-icon"></i>
+                    Technical Expertise
+                </h2>
+                <p class="section-subtitle">Comprehensive Skill Set Across Technologies</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-keyboard category-icon"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-cloud">
+                        <span class="skill-tag">
+                            <i class="fab fa-java"></i> Java
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-code"></i> Kotlin
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-python"></i> Python
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-js"></i> JavaScript
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-go"></i> Go
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-c"></i> C/C++
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-html5"></i> HTML/CSS
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-swift"></i> Swift
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-php"></i> PHP
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-rust"></i> TypeScript
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Technologies & Frameworks -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code category-icon"></i>
+                        <h3>Technologies & Frameworks</h3>
+                    </div>
+                    <div class="skills-cloud">
+                        <span class="skill-tag">
+                            <i class="fab fa-android"></i> Android
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-mobile-alt"></i> Jetpack Compose
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-bolt"></i> Retrofit
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-react"></i> React Native
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-react"></i> React
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-node-js"></i> Node.js
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-bolt"></i> Express
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-database"></i> PostgreSQL
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools category-icon"></i>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skills-cloud">
+                        <span class="skill-tag">
+                            <i class="fab fa-aws"></i> AWS
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-git-alt"></i> Git
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-docker"></i> Docker
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-linux"></i> Linux
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-jenkins"></i> Jenkins
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fab fa-jira"></i> Jira
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-comments"></i> Confluence
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-vial"></i> JUnit/Mockito
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fas fa-bolt"></i> gRPC
+                        </span>
+                    </div>
+                </div>
+
+                <!-- CS Concepts -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-brain category-icon"></i>
+                        <h3>Computer Science Concepts</h3>
+                    </div>
+                    <div class="concepts-grid">
+                        <div class="concept-item">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Data Structures & Algorithms</span>
+                        </div>
+                        <div class="concept-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>System Design</span>
+                        </div>
+                        <div class="concept-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>OOP & Design Patterns</span>
+                        </div>
+                        <div class="concept-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>REST APIs & Microservices</span>
+                        </div>
+                        <div class="concept-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>CI/CD Pipelines</span>
+                        </div>
+                        <div class="concept-item">
+                            <i class="fas fa-database"></i>
+                            <span>Database Systems</span>
+                        </div>
+                        <div class="concept-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="concept-item">
+                            <i class="fas fa-language"></i>
+                            <span>NLP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase section-icon"></i>
+                    Professional Experience
+                </h2>
+                <p class="section-subtitle">Building Impactful Solutions at Scale</p>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="experience-card amazon">
+                    <div class="company-header">
+                        <div class="company-logo">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/amazon.svg" alt="Amazon">
+                        </div>
+                        <div class="company-info">
+                            <h3>Amazon</h3>
+                            <p class="company-role">Software Development Engineer Intern</p>
+                            <p class="company-period">Jun 2025 - Sept 2025 | Irvine, USA</p>
+                        </div>
+                        <div class="company-tags">
+                            <span class="company-tag">AWS</span>
+                            <span class="company-tag">CI/CD</span>
+                            <span class="company-tag">Performance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements">
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Perfetto Video Timeline Synchronization Tool</h4>
+                                <p>Developed a tool that adds visual context to performance data, enabling correlated analysis between screen recordings, device logs, and traces.</p>
+                                <div class="achievement-stats">
+                                    <span class="stat">30% faster debugging</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>End-to-End CI/CD Debugging Pipeline</h4>
+                                <p>Engineered automated collection, processing, and precise 3‑way synchronization of data sources; deployed on AWS.</p>
+                                <div class="achievement-stats">
+                                    <span class="stat">50% efficiency boost</span>
+                                    <span class="stat">AWS Deployment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card makemytrip">
+                    <div class="company-header">
+                        <div class="company-logo">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/makemytrip.svg" alt="MakeMyTrip">
+                        </div>
+                        <div class="company-info">
+                            <h3>MakeMyTrip</h3>
+                            <p class="company-role">Software Engineer Intern - Android Developer</p>
+                            <p class="company-period">Jan 2024 - Jun 2024 | Bengaluru, India</p>
+                        </div>
+                        <div class="company-tags">
+                            <span class="company-tag">Android</span>
+                            <span class="company-tag">Kotlin</span>
+                            <span class="company-tag">Jetpack</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements">
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Credit-card Onboarding Feature</h4>
+                                <p>Engineered comprehensive user flow with 5+ screens using MVVM, Jetpack Navigation, ViewModel, and LiveData.</p>
+                                <div class="achievement-stats">
+                                    <span class="stat">5+ Screens</span>
+                                    <span class="stat">MVVM Architecture</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Co-Traveller Module Revamp</h4>
+                                <p>Collaborated with Lead Engineer to build an expandable multi-section form with field-level validation.</p>
+                                <div class="achievement-stats">
+                                    <span class="stat">20% faster response</span>
+                                    <span class="stat">Improved accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement">
+                            <div class="achievement-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Customizable Animated Badge</h4>
+                                <p>Created a badge using Jetpack Compose to increase engagement with new features.</p>
+                                <div class="achievement-stats">
+                                    <span class="stat">15% engagement increase</span>
+                                    <span class="stat">Jetpack Compose</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram section-icon"></i>
+                    Featured Projects
+                </h2>
+                <p class="section-subtitle">Innovative Solutions with Real Impact</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Conductor Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Conductor: Course Management Platform</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/CSE210-fa25-team06/conductor-app/tree/main" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="project-date">Dec 2025</span>
+                    </div>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>1000+ Students</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-code"></i>
+                            <span>40+ REST APIs</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>4-level RBAC</span>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Full-stack system for streamlined attendance, scheduling, and group coordination with Dockerized deployment.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">Testing</span>
+                    </div>
+                    
+                    <div class="project-impact">
+                        <span class="impact-badge">
+                            <i class="fas fa-rocket"></i> 80% faster setup
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Roomba Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Roomba-Style Autonomous Navigation</h3>
+                        </div>
+                        <span class="project-date">Dec 2025</span>
+                    </div>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-bullseye"></i>
+                            <span>92% Accuracy</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-chart-line"></i>
+                            <span>75% Error Reduction</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Avoidance</span>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Autonomous navigation using EKF-SLAM with camera sensor object detection and planning algorithms.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">EKF-SLAM</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Planning Algorithms</span>
+                        <span class="tech-tag">Robotics</span>
+                    </div>
+                </div>
+
+                <!-- TritonTube Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>TritonTube Video Streaming Platform</h3>
+                        </div>
+                        <span class="project-date">Jun 2025</span>
+                    </div>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fab fa-golang"></i>
+                            <span>Go Language</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-network-wired"></i>
+                            <span>gRPC</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-server"></i>
+                            <span>RAFT Protocol</span>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Scalable distributed video streaming platform similar to YouTube with fault-tolerant metadata management.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">gRPC</span>
+                        <span class="tech-tag">RAFT</span>
+                        <span class="tech-tag">Distributed Systems</span>
+                    </div>
+                </div>
+
+                <!-- Face Recognition Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Face Recognition Door Lock System</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/siri102002/Face-Recognition-Door-Lock-System" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="project-date">Jan 2024</span>
+                    </div>
+                    
+                    <div class="project-role">
+                        <i class="fas fa-user-tie"></i> Team Lead
+                    </div>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>99.5% Security</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-bullseye"></i>
+                            <span>99% Accuracy</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-images"></i>
+                            <span>15+ Images</span>
+                        </div>
+                    </div>
+                    
+                    <p class="project-description">
+                        Two-factor authentication door lock system with QR code scanning and OpenCV-based face recognition.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                    
+                    <div class="project-impact">
+                        <span class="impact-badge">
+                            <i class="fas fa-chart-line-down"></i> 40% fewer false positives
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-file-alt section-icon"></i>
+                    Research Publications
+                </h2>
+                <p class="section-subtitle">Contributing to Academic Knowledge</p>
+            </div>
+
+            <div class="publications-container">
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-icon">
+                            <i class="fas fa-mask"></i>
+                        </div>
+                        <div class="publication-info">
+                            <h3>Real time DNN-based Face Mask Detection System using MobileNetV2 and ResNet50</h3>
+                            <p class="publication-conference">ICICT 2023, IEEE</p>
+                        </div>
+                        <div class="publication-badge">
+                            <span class="badge">Published</span>
+                        </div>
+                    </div>
+                    
+                    <p class="publication-abstract">
+                        Developed a real-time face mask detection system using deep neural networks with MobileNetV2 and ResNet50 architectures for enhanced public safety during pandemic situations.
+                    </p>
+                    
+                    <div class="publication-links">
+                        <a href="https://ieeexplore.ieee.org/document/10133992" target="_blank" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View on IEEE Xplore
+                        </a>
+                        <span class="doi">DOI: 10.1109/ICICT57646.2023.10133992</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="publication-info">
+                            <h3>Enhancing Cartoon Recognition in Real Time: Comparative Analysis of CNN, ResNet50, and VGG16 Deep Learning Models</h3>
+                            <p class="publication-conference">ICAISS, IEEE</p>
+                        </div>
+                        <div class="publication-badge">
+                            <span class="badge">Published</span>
+                        </div>
+                    </div>
+                    
+                    <p class="publication-abstract">
+                        Conducted comparative analysis of deep learning models for real-time cartoon recognition, evaluating performance metrics of CNN, ResNet50, and VGG16 architectures.
+                    </p>
+                    
+                    <div class="publication-links">
+                        <a href="https://ieeexplore.ieee.org/document/10250463" target="_blank" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View on IEEE Xplore
+                        </a>
+                        <span class="doi">DOI: 10.1109/ICAISS58487.2023.10250463</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope section-icon"></i>
+                    Get In Touch
+                </h2>
+                <p class="section-subtitle">Let's Build Something Amazing Together</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>siri102002@gmail.com</p>
+                            <a href="mailto:siri102002@gmail.com" class="contact-link">Send Email</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>619-953-9520</p>
+                            <a href="tel:+16199539520" class="contact-link">Call Now</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>Connect Professionally</p>
+                            <a href="https://www.linkedin.com/in/sai-siri-chinta-75509122a/" target="_blank" class="contact-link">View Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>Explore My Projects</p>
+                            <a href="https://github.com/siri102002" target="_blank" class="contact-link">View Repositories</a>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="contact-form">
+                <form action="https://formsubmit.co/siri102002@gmail.com" method="POST">
+                    <!-- Hidden fields for better configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Message from Portfolio - {{name}}">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://yourusername.github.io/#contact?success=true">
+                    
+                    <!-- Your form fields with name attributes -->
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Your Name
+                        </label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Your Email
+                        </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">
+                            <i class="fas fa-tag"></i> Subject
+                        </label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i> Your Message
+                        </label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="gradient-text">Sai Siri Chinta</span>
+                    <p>Software Development Engineer & Researcher</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#education">Education</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/sai-siri-chinta-75509122a/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/siri102002" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:siri102002@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="theme-toggle-small" id="themeToggleSmall">
+                        <i class="fas fa-moon"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Sai Siri Chinta. All rights reserved.</p>
+                    <p>Master of Science in Computer Science | University of California San Diego</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
