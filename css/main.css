@@ -1,0 +1,683 @@
+/* Buttons */
+.btn-primary, .btn-secondary {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-category, .project-card, .experience-card,
+.publication-card, .node-content {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.skill-category:hover, .project-card:hover, 
+.experience-card:hover, .publication-card:hover, 
+.node-content:hover {
+    transform: translateY(-10px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+    background: var(--bg-card-hover);
+}
+
+.contact-card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+    background: var(--bg-card-hover);
+}
+
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    transition: var(--transition);
+    background: transparent !important;
+    border: none !important;
+}
+
+.contact-card.email .contact-icon i,
+.contact-card:nth-child(1) .contact-icon i { 
+    color: #ea4335; /* Email */
+}
+
+.contact-card.phone .contact-icon i,
+.contact-card:nth-child(2) .contact-icon i { 
+    color: #25d366; /* Phone */
+}
+
+.contact-card.linkedin .contact-icon i,
+.contact-card:nth-child(3) .contact-icon i { 
+    color: #0a66c2; /* LinkedIn */
+}
+
+.contact-card.github .contact-icon i,
+.contact-card:nth-child(4) .contact-icon i { 
+    color: #181717;
+}
+
+body.dark-mode .contact-card.email .contact-icon i,
+body.dark-mode .contact-card:nth-child(1) .contact-icon i {
+    color: #ff6b6b; /* Brighter red */
+}
+
+body.dark-mode .contact-card.phone .contact-icon i,
+body.dark-mode .contact-card:nth-child(2) .contact-icon i {
+    color: #4de7ff; /* Cyan */
+}
+
+body.dark-mode .contact-card.linkedin .contact-icon i,
+body.dark-mode .contact-card:nth-child(3) .contact-icon i {
+    color: #61dafb; /* Bright blue */
+}
+
+body.dark-mode .contact-card.github .contact-icon i,
+body.dark-mode .contact-card:nth-child(4) .contact-icon i {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Light Mode Colors */
+body.light-mode .contact-card.email .contact-icon i,
+body.light-mode .contact-card:nth-child(1) .contact-icon i {
+    color: #d93025; /* Darker red */
+}
+
+body.light-mode .contact-card.phone .contact-icon i,
+body.light-mode .contact-card:nth-child(2) .contact-icon i {
+    color: #128c7e; /* Teal green */
+}
+
+body.light-mode .contact-card.linkedin .contact-icon i,
+body.light-mode .contact-card:nth-child(3) .contact-icon i {
+    color: #0077b5; /* Darker blue */
+}
+
+body.light-mode .contact-card.github .contact-icon i,
+body.light-mode .contact-card:nth-child(4) .contact-icon i {
+    color: #181717 !important; 
+}
+
+.contact-card:hover .contact-icon i {
+    transform: scale(1.2);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) scale(1.2); }
+    50% { transform: translateY(-5px) scale(1.3); }
+}
+
+.contact-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.contact-link:hover {
+    color: var(--secondary);
+    background: rgba(0, 212, 255, 0.2);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
+}
+
+body.dark-mode .contact-card.github .contact-link {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+body.dark-mode .contact-card.github .contact-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Contact details */
+.contact-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.contact-details p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-form {
+    background: var(--bg-card);
+    border-radius: 25px;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.contact-form:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.form-group label i {
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.1rem;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background: var(--gradient) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, 
+                  linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    overflow: hidden;
+    margin: 0 auto 40px;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.profile-picture:hover img {
+    transform: scale(1.05);
+}
+
+.profile-picture::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: var(--gradient);
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.company-logo img[src*="amazon"] {
+    filter: brightness(0) invert(1);
+}
+
+.light-mode .company-logo img[src*="amazon"] {
+    filter: brightness(1) invert(0);
+}
+
+.node-icon img[src*="vit"] {
+    filter: brightness(0) invert(1);
+}
+
+.light-mode .node-icon img[src*="vit"] {
+    filter: brightness(1) invert(0);
+}
+
+.node-icon img[src*="ucsd"] {
+    filter: none !important;
+}
+
+.dark-mode .node-icon img[src*="ucsd"] {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.experience-card.makemytrip .company-logo img {
+    filter: none !important;
+}
+
+.dark-mode .experience-card.makemytrip .company-logo img {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .floating-nav {
+        right: 15px;
+        padding: 15px 10px;
+    }
+    
+    .nav-dot {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .profile-picture {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .contact-card {
+        padding: 25px;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-nav {
+        display: none;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .theme-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .profile-picture {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        padding: 20px;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        padding: 25px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+    }
+    
+    .submit-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    .profile-picture {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Theme toggle tooltip */
+.theme-toggle .tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contact-card::before,
+.contact-card::after {
+    display: none !important;
+}
+
+.contact-icon::before,
+.contact-icon::after {
+    display: none !important;
+}
+
+body.dark-mode .contact-icon,
+body.light-mode .contact-icon {
+    background: transparent !important;
+}
+
+.footer-social a {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.footer-social a:nth-child(1) { 
+    color: #0a66c2; /* LinkedIn */
+}
+
+.footer-social a:nth-child(2) { 
+    color: #181717; /* GitHub */
+}
+
+.footer-social a:nth-child(3) { 
+    color: #ea4335; /* Email */
+}
+
+.footer-social a:nth-child(4) { 
+    color: var(--primary); /* Theme toggle */
+}
+
+body.dark-mode .footer-social a:nth-child(2) { 
+    color: #ffffff !important; 
+}
+
+body.dark-mode .footer-social a:nth-child(1) { 
+    color: #61dafb !important; 
+}
+
+.footer-social a:hover {
+    background: var(--gradient);
+    color: white !important;
+    transform: translateY(-5px);
+    border-color: transparent;
+}
+
+.footer-social a:hover i {
+    color: white !important;
+}
+
+.skill-tag i.fa-java { color: #007396; }
+.skill-tag i.fa-code { color: #7f52ff; } /* Kotlin */
+.skill-tag i.fa-python { color: #3776ab; }
+.skill-tag i.fa-js { color: #f7df1e; }
+.skill-tag i.fa-go { color: #00ADD8; }
+.skill-tag i.fa-c { color: #A8B9CC; }
+.skill-tag i.fa-html5 { color: #e34f26; }
+.skill-tag i.fa-css3-alt { color: #1572b6; }
+.skill-tag i.fa-android { color: #3ddc84; }
+.skill-tag i.fa-react { color: #61dafb; }
+.skill-tag i.fa-aws { color: #ff9900; }
+.skill-tag i.fa-docker { color: #2496ed; }
+.skill-tag i.fa-git-alt { color: #f05032; }
+.skill-tag i.fa-linux { color: #fcc624; }
+
+body.dark-mode .skill-tag i.fa-js { color: #f7df1e; } 
+body.dark-mode .skill-tag i.fa-git-alt { color: #f05032; } 
+
+.project-stats .stat i {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Publication icons */
+.publication-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Node icons */
+.node-icon {
+    width: 90px;
+    height: 90px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.node-icon:hover {
+    transform: scale(1.1);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-md);
+}
+
+/* Hero contact items */
+.hero-contact-grid .contact-item i {
+    color: var(--secondary);
+}
+
+.hero-contact-grid .contact-item:nth-child(2) i { 
+    color: var(--accent); 
+}
+
+.hero-contact-grid .contact-item:nth-child(3) i { 
+    color: var(--primary); 
+}
+
+.hero-contact-grid .contact-item:nth-child(4) i { 
+    color: #0a66c2; /* LinkedIn */
+}
+
+body.dark-mode .hero-contact-grid .contact-item:nth-child(4) i { 
+    color: #61dafb; 
+}
+
+/* Animation for elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.dark-mode .experience-card.amazon .company-logo img {
+    filter: brightness(0) invert(1) !important;
+}
+
+.light-mode .experience-card.amazon .company-logo img {
+    filter: brightness(1) invert(0) !important;
+}
+
+.dark-mode .node-icon img[src*="vit"] {
+    filter: brightness(0) invert(1) !important;
+}
+
+.light-mode .node-icon img[src*="vit"] {
+    filter: brightness(1) invert(0) !important;
+}
+
+.node-icon img[src*="ucsd.svg"] {
+    filter: none !important;
+}
+
+.experience-card.makemytrip .company-logo img {
+    filter: none !important;
+}

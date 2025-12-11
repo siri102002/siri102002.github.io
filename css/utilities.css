@@ -1,0 +1,174 @@
+:root {
+    --android: #3ddc84;
+    --aws: #ff9900;
+    --react: #61dafb;
+    --docker: #2496ed;
+    --nodejs: #339933;
+    --python: #3776ab;
+    --java: #007396;
+    --kotlin: #7f52ff;
+    --javascript: #f7df1e;
+    --html5: #e34f26;
+    --css3: #1572b6;
+    --git: #f05032;
+    --github: #181717;
+    --linkedin: #0a66c2;
+    
+    /* Theme Variables */
+    --primary: #8a2be2;
+    --primary-light: #9d4aff;
+    --secondary: #00d4ff;
+    --secondary-light: #4de7ff;
+    --accent: #ff6b6b;
+    
+    /* Backgrounds */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #121218;
+    --bg-card: rgba(30, 30, 46, 0.8);
+    --bg-card-hover: rgba(40, 40, 60, 0.9);
+    
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0c0;
+    --text-muted: #8888a0;
+    
+    /* Borders */
+    --border-color: rgba(138, 43, 226, 0.2);
+    --border-hover: rgba(138, 43, 226, 0.4);
+    
+    /* Gradients */
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --gradient-light: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+    --gradient-horizontal: linear-gradient(90deg, var(--primary), var(--secondary));
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 40px rgba(138, 43, 226, 0.2);
+    --glow: 0 0 20px rgba(138, 43, 226, 0.3);
+    
+    /* Transitions */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light-mode {
+    --primary: #6a11cb;
+    --primary-light: #7d21db;
+    --secondary: #2575fc;
+    --secondary-light: #4d8ffc;
+    --accent: #ff416c;
+    --accent-light: #ff6b8b;
+    
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-card-hover: rgba(255, 255, 255, 1);
+    
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    
+    --border-color: rgba(106, 17, 203, 0.1);
+    --border-hover: rgba(106, 17, 203, 0.3);
+    
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --gradient-light: linear-gradient(135deg, var(--primary-light), var(--secondary-light));
+    
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 40px rgba(106, 17, 203, 0.1);
+    --glow: 0 0 20px rgba(106, 17, 203, 0.1);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: var(--transition);
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #0c0c14 100%);
+}
+
+body.light-mode {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #eef2f7 100%);
+}
+
+/* Utility Classes */
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.section-hidden {
+    display: none !important;
+}
+
+.section-active {
+    display: block !important;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading Fallback */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Hardware Acceleration */
+.section, .floating-nav, .theme-toggle, .nav-dot,
+.floating-icon, .project-card, .experience-card,
+.hero-container, .skill-category, .publication-card {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}

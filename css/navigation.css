@@ -1,0 +1,130 @@
+.floating-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    padding: 20px 15px;
+    border-radius: 25px;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-dot {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.nav-dot[data-section="home"] i { color: var(--primary); }
+.nav-dot[data-section="education"] i { color: var(--android); }
+.nav-dot[data-section="skills"] i { color: var(--react); }
+.nav-dot[data-section="experience"] i { color: var(--aws); }
+.nav-dot[data-section="projects"] i { color: var(--python); }
+.nav-dot[data-section="publications"] i { color: var(--nodejs); }
+.nav-dot[data-section="contact"] i { color: var(--secondary); }
+
+.nav-dot:hover {
+    transform: translateX(-5px) scale(1.1);
+    background: var(--gradient);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.nav-dot:hover i {
+    color: white !important;
+}
+
+.nav-dot.active {
+    background: var(--gradient);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+}
+
+.nav-dot.active i {
+    color: white !important;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.nav-dot .tooltip {
+    position: absolute;
+    right: 70px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: var(--transition);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-dot:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+}
+
+/* Progress Bar */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    z-index: 999;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--gradient);
+    width: 0%;
+    transition: width 0.3s ease;
+}

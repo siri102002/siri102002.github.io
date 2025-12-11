@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Siri Chinta | Innovative Portfolio</title>
+    <title>Sai Siri Chinta | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="dark-mode">
-    <!-- Floating Navigation Dots -->
+    <!-- Loading Screen -->
+    <div class="loading"></div>
+    <!-- Floating Navigation  -->
     <div class="floating-nav" id="floatingNav">
         <div class="nav-dot active" data-section="home">
             <i class="fas fa-home"></i>
@@ -68,8 +75,7 @@
                         </h1>
                         <p class="hero-subtitle">Master's in Computer Science @ UC San Diego</p>
                         <p class="hero-description">
-                            Software Development Engineer specializing in Android development, 
-                            distributed systems, and creating impactful solutions through 
+                            Software Development Engineer creating impactful solutions through 
                             innovative technology.
                         </p>
                         
@@ -161,7 +167,7 @@
                 <div class="timeline-track">
                     <div class="timeline-node">
                         <div class="node-icon">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/ucsd.svg" alt="UCSD">
+                            <img src="assets/logos/ucsd.svg" alt="University of California San Diego" class="education-logo">
                         </div>
                         <div class="node-content">
                             <h3 class="node-title">University of California San Diego</h3>
@@ -190,7 +196,6 @@
                             <p class="node-period">Sept 2020 - May 2024</p>
                             <div class="node-badge">
                                 <span class="badge">CGPA: 3.82/4.0</span>
-                                <span class="badge">Top 10%</span>
                             </div>
                             <div class="node-tags">
                                 <span class="tag">Core CS</span>
@@ -430,7 +435,7 @@
                 <div class="experience-card makemytrip">
                     <div class="company-header">
                         <div class="company-logo">
-                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/makemytrip.svg" alt="MakeMyTrip">
+                            <img src="assets/logos/makemytrip.svg" alt="MakeMyTrip" class="experience-logo">
                         </div>
                         <div class="company-info">
                             <h3>MakeMyTrip</h3>
@@ -763,7 +768,7 @@
 
             <div class="contact-container">
                 <div class="contact-info">
-                    <div class="contact-card">
+                    <div class="contact-card email">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -774,7 +779,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-card">
+                    <div class="contact-card phone">
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -785,7 +790,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-card">
+                    <div class="contact-card linkedin">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin"></i>
                         </div>
@@ -796,7 +801,7 @@
                         </div>
                     </div>
 
-                    <div class="contact-card">
+                    <div class="contact-card github">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
@@ -857,7 +862,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <span class="gradient-text">Sai Siri Chinta</span>
-                    <p>Software Development Engineer & Researcher</p>
+                    <p>Software Development Engineer</p>
                 </div>
                 
                 <div class="footer-links">
@@ -893,6 +898,7 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/sections.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
