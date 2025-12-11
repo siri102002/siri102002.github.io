@@ -224,27 +224,159 @@ function initInteractiveEffects() {
     });
 }
 
-// 7. Form Submission
+// Form submission handling
 function initFormSubmit() {
-    const contactForm = document.querySelector('.contact-form form');
+    const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
-    
-    contactForm.addEventListener('submit', function(e) {
+
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Prevent default form submission
+        
         const submitBtn = this.querySelector('.submit-btn');
         const originalText = submitBtn.innerHTML;
+        const formData = new FormData(this);
         
         // Show loading state
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Form will submit normally
-        // Reset button after 5 seconds if something goes wrong
-        setTimeout(() => {
+        // Validate form
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        if (!name || !email || !subject || !message) {
+            showNotification('Please fill in all fields.', 'error');
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-        }, 5000);
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showNotification('Please enter a valid email address.', 'error');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            return;
+        }
+        
+        try {
+            // Submit form using fetch
+            const response = await fetch('https://formsubmit.co/ajax/siri102002@gmail.com', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success === "true") {
+                // Show success notification
+                showNotification(
+                    'Message Sent Successfully!',
+                    'Thank you for your message. I will get back to you soon.',
+                    'success'
+                );
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Scroll to contact section smoothly
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            } else {
+                showNotification(
+                    'Submission Failed',
+                    'There was an error sending your message. Please try again.',
+                    'error'
+                );
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showNotification(
+                'Network Error',
+                'Unable to send message. Please check your connection and try again.',
+                'error'
+            );
+        } finally {
+            // Reset button
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }
     });
 }
+
+// Notification function
+function showNotification(title, message, type = 'info') {
+    // Remove existing notifications
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notification => {
+        notification.remove();
+    });
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    
+    // Icons based on type
+    const icons = {
+        success: 'fas fa-check-circle',
+        error: 'fas fa-exclamation-circle',
+        info: 'fas fa-info-circle'
+    };
+    
+    notification.innerHTML = `
+        <div class="notification-icon">
+            <i class="${icons[type] || icons.info}"></i>
+        </div>
+        <div class="notification-content">
+            <h4>${title}</h4>
+            <p>${message}</p>
+        </div>
+        <button class="notification-close" onclick="this.parentElement.remove()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="notification-progress"></div>
+    `;
+    
+    // Add to DOM
+    document.body.appendChild(notification);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.style.animation = 'fadeOut 0.5s ease forwards';
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 500);
+        }
+    }, 5000);
+    
+    // Close on click
+    notification.addEventListener('click', (e) => {
+        if (e.target.closest('.notification-close')) {
+            notification.style.animation = 'fadeOut 0.5s ease forwards';
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 500);
+        }
+    });
+}
+
+// Initialize form when DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+    initFormSubmit();
+});
 
 function initLogoFix() {
     const body = document.body;
